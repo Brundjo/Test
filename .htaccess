@@ -1,0 +1,5 @@
+<FilesMatch ".(json)$">
+
+deny from all
+
+</FilesMatch>
