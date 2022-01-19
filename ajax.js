@@ -17,7 +17,7 @@ $( document ).ready(function() {
 		}
 	);
 });
-var result;
+
 function sendAjaxForm(result_form, ajax_form, url) {
     $.ajax({
         url:     url, //url страницы

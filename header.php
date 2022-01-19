@@ -54,7 +54,7 @@
                 });
          
                 //================ Проверка валидности пароля ==================
-				var pattern_password = /^(?=.*[a-z])(?=.*\d).{6,}$/i;
+				var pattern_password = /^(?=.*[a-z])(?=.*\d)\w{6,}$/i;
                 var password = $('input[name=password]');
                  
                 password.blur(function(){
@@ -75,7 +75,7 @@
                             $('#valid_password_message').text('');
                         }else{
                             //Выводим сообщение об ошибке
-                            $('#valid_password_message').text('Обязательно должны присутствовать как минимум одна цифра и одна буква');
+                            $('#valid_password_message').text('Состоять должен из цифр и букв. Обязательно должны присутствовать как минимум одна цифра и одна буква');
 						}
                     }else{
                         $('#valid_password_message').text('Введите пароль');
@@ -83,7 +83,7 @@
                 });
 				
 				//================ Проверка валидности повторного пароля ==================
-				var pattern_confirm_password = /^(?=.*[a-z])(?=.*\d).{6,}$/i;
+				var pattern_confirm_password = /^(?=.*[a-z])(?=.*\d)\w{6,}$/i;
                 var confirm_password = $('input[name=confirm_password]');
                  
                 confirm_password.blur(function(){
